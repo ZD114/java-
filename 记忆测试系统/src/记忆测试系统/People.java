@@ -1,0 +1,25 @@
+package º«“‰≤‚ ‘œµÕ≥;
+
+import java.io.Serializable;
+
+public class People implements Serializable,Comparable{
+	String name=null;
+	int time=0;
+	public People(String name,int t) {
+		this.name=name;
+		time=t;
+	}
+	public int getTime() {
+		return time;
+	}
+	public String getName() {
+		return name;
+	}
+	public int compareTo(Object b) {
+		People p = (People)b;
+		if((this.time-p.time)==0)
+			return 1;
+		else
+			return (this.time-p.time);
+	}
+}
